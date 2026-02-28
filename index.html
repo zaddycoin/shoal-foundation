@@ -65,12 +65,13 @@
 
     /* Hero */
     .hero {
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 120px 32px 80px;
+      padding: 160px 32px 120px;
       animation: fadeUp 0.8s ease 0.1s both;
     }
 
@@ -84,6 +85,16 @@
       color: #1a1a1a;
     }
 
+    .hero .tagline {
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      font-size: clamp(16px, 2.5vw, 20px);
+      line-height: 1.7;
+      color: #888;
+      max-width: 480px;
+      margin-bottom: 48px;
+    }
+
     .divider {
       width: 40px;
       height: 1px;
@@ -91,7 +102,16 @@
       margin: 0 auto;
     }
 
-    /* Sections shared */
+    /* Contact */
+    .contact {
+      padding: 80px 0 120px;
+      animation: fadeUp 0.8s ease 0.3s both;
+    }
+
+    .contact .container {
+      text-align: center;
+    }
+
     .section-label {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 10px;
@@ -99,74 +119,6 @@
       text-transform: uppercase;
       color: #999;
       margin-bottom: 40px;
-    }
-
-    /* About */
-    .about {
-      padding: 80px 0;
-      animation: fadeUp 0.8s ease 0.2s both;
-    }
-
-    .about .container {
-      text-align: center;
-    }
-
-    .about-text {
-      font-family: 'Libre Baskerville', serif;
-      font-style: italic;
-      font-size: clamp(18px, 3vw, 24px);
-      line-height: 1.7;
-      color: #555;
-      max-width: 640px;
-      margin: 0 auto;
-    }
-
-    /* Team */
-    .team {
-      padding: 80px 0;
-      animation: fadeUp 0.8s ease 0.3s both;
-    }
-
-    .team .container {
-      text-align: center;
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 48px;
-      max-width: 640px;
-      margin: 0 auto;
-    }
-
-    .team-member {
-      text-align: center;
-    }
-
-    .team-member h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      font-weight: 400;
-      color: #1a1a1a;
-      margin-bottom: 8px;
-    }
-
-    .team-member .role {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #999;
-    }
-
-    /* Contact */
-    .contact {
-      padding: 80px 0 120px;
-      animation: fadeUp 0.8s ease 0.4s both;
-    }
-
-    .contact .container {
-      text-align: center;
     }
 
     .contact-link {
@@ -217,13 +169,11 @@
     /* Mobile */
     @media (max-width: 640px) {
       .hero {
-        padding: 80px 24px 60px;
+        padding: 100px 24px 80px;
       }
 
-      .about,
-      .team,
       .contact {
-        padding: 60px 0;
+        padding: 60px 0 80px;
       }
 
       .container {
@@ -241,8 +191,8 @@
   <header>
     <div class="container">
       <nav>
-        <a href="#about">About</a>
-        <a href="#team">Team</a>
+        <a href="/about.html">About</a>
+        <a href="/team.html">Team</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -250,33 +200,9 @@
 
   <section class="hero">
     <h1>Shoal Foundation</h1>
+    <p class="tagline">Using technology to empower people and connect resources.</p>
     <div class="divider"></div>
   </section>
-
-  <section class="about" id="about">
-    <div class="container">
-      <p class="section-label">About</p>
-      <p class="about-text">
-        Building the infrastructure for a more connected and equitable future. We invest in people, ideas, and technologies that move the world forward.
-      </p>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <section class="team" id="team">
-    <div class="container">
-      <p class="section-label">Team</p>
-      <div class="team-grid">
-        <div class="team-member">
-          <h3>Gabe</h3>
-          <p class="role">Founder</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
 
   <section class="contact" id="contact">
     <div class="container">

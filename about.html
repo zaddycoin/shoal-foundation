@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Shoal Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f8f7f4;
+      color: #1a1a1a;
+      font-family: 'IBM Plex Mono', monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 32px;
+      width: 100%;
+    }
+
+    /* Header */
+    header {
+      padding: 48px 0 0;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #999;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #1a1a1a;
+    }
+
+    /* Page Title */
+    .page-title {
+      text-align: center;
+      padding: 100px 32px 60px;
+      animation: fadeUp 0.8s ease 0.1s both;
+    }
+
+    .page-title h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: #d4d0c8;
+      margin: 0 auto;
+    }
+
+    /* Content */
+    .content {
+      flex: 1;
+      padding: 60px 0 100px;
+      animation: fadeUp 0.8s ease 0.2s both;
+    }
+
+    .content .container {
+      max-width: 680px;
+    }
+
+    .lead {
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      font-size: clamp(18px, 3vw, 22px);
+      line-height: 1.8;
+      color: #555;
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 24px;
+    }
+
+    .body-text {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 15px;
+      line-height: 1.9;
+      color: #444;
+      margin-bottom: 48px;
+    }
+
+    .body-text:last-child {
+      margin-bottom: 0;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 24px;
+    }
+
+    .value-item h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .value-item p {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #666;
+    }
+
+    /* Footer */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid #e8e5de;
+    }
+
+    footer .container {
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 11px;
+      color: #bbb;
+      letter-spacing: 0.05em;
+    }
+
+    footer a {
+      color: #999;
+      text-decoration: none;
+      border-bottom: 1px solid #d4d0c8;
+      transition: border-color 0.3s ease;
+    }
+
+    footer a:hover {
+      border-color: #1a1a1a;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      .page-title {
+        padding: 80px 24px 48px;
+      }
+
+      .content {
+        padding: 48px 0 80px;
+      }
+
+      .container {
+        padding: 0 24px;
+      }
+
+      header .container {
+        gap: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about.html" class="active">About</a>
+        <a href="/#team">Team</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-title">
+    <h1>About</h1>
+    <div class="divider"></div>
+  </section>
+
+  <section class="content">
+    <div class="container">
+
+      <p class="lead">
+        We believe technology should serve people — not the other way around.
+      </p>
+
+      <p class="section-label">Our Purpose</p>
+      <p class="body-text">
+        Shoal Foundation exists to harness the power of technology to empower individuals and strengthen communities. We work at the intersection of innovation and human need, building tools and platforms that connect people to the resources they need to thrive.
+      </p>
+
+      <p class="body-text">
+        Too often, the people who need support the most are the hardest to reach. We are committed to closing that gap — creating pathways that make essential resources accessible, discoverable, and actionable for everyone, regardless of background or circumstance.
+      </p>
+
+      <div class="divider" style="margin: 64px auto;"></div>
+
+      <p class="section-label">What We Believe</p>
+      <div class="values-grid">
+        <div class="value-item">
+          <h3>Technology as a Bridge</h3>
+          <p>The right technology can break down barriers between people and the resources they need. We build with intention, designing systems that simplify complexity and create real connections.</p>
+        </div>
+        <div class="value-item">
+          <h3>People First</h3>
+          <p>Every line of code, every product decision, and every partnership starts with the same question: how does this help people? We measure our success not in metrics, but in the lives we touch.</p>
+        </div>
+        <div class="value-item">
+          <h3>Connected Resources</h3>
+          <p>Resources exist. Knowledge exists. Opportunity exists. The challenge is connecting them to the people who need them most. We focus on building the infrastructure that makes those connections possible at scale.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Shoal Foundation &nbsp;&middot;&nbsp; <a href="mailto:gabe@shoal.foundation">gabe@shoal.foundation</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
