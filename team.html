@@ -96,7 +96,14 @@
     }
 
     .team-content .container {
-      max-width: 680px;
+      max-width: 860px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
     }
 
     .member-card {
@@ -115,7 +122,7 @@
 
     .member-name {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(28px, 5vw, 36px);
+      font-size: clamp(22px, 3vw, 28px);
       font-weight: 400;
       color: #1a1a1a;
       margin-bottom: 8px;
@@ -152,12 +159,10 @@
     .member-bio {
       font-family: 'Libre Baskerville', serif;
       font-style: italic;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1.8;
       color: #555;
       text-align: center;
-      max-width: 520px;
-      margin: 0 auto;
     }
 
     /* Footer */
@@ -221,6 +226,11 @@
         width: 140px;
         height: 140px;
       }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
     }
   </style>
 </head>
@@ -244,29 +254,34 @@
 
   <section class="team-content">
     <div class="container">
-      <div class="member-card">
-        <img src="/images/gabriel-tramble.jpg" alt="Gabriel Tramble" class="member-photo">
-        <h2 class="member-name">Gabriel Tramble</h2>
-        <p class="member-title">Founder</p>
-        <div class="member-details">
-          <span class="detail-tag">UC Berkeley</span>
-          <span class="detail-tag">Coinbase</span>
-          <span class="detail-tag">Crypto x AI</span>
+      <div class="team-grid">
+        <div class="member-card">
+          <img src="/images/gabriel-tramble.jpg" alt="Gabriel Tramble" class="member-photo">
+          <h2 class="member-name">Gabriel Tramble</h2>
+          <p class="member-title">Founder</p>
+          <div class="member-details">
+            <span class="detail-tag">UC Berkeley</span>
+            <span class="detail-tag">Coinbase</span>
+            <span class="detail-tag">Crypto x AI</span>
+          </div>
+          <p class="member-bio">
+            Passionate about community and bringing people together through the ethical usage of technology and AI.
+          </p>
         </div>
-        <p class="member-bio">
-          Passionate about community and bringing people together through the ethical usage of technology and AI. Dedicated to building systems that empower individuals and connect resources where they are needed most.
-        </p>
-      </div>
 
-      <div style="width: 40px; height: 1px; background: #d4d0c8; margin: 64px auto;"></div>
-
-      <div class="member-card">
-        <div class="member-initial" style="width: 180px; height: 180px; border-radius: 50%; background: #e8e5de; margin: 0 auto 32px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 48px; color: #999;">D</div>
-        <h2 class="member-name">Dominic Rodriguez</h2>
-        <p class="member-title">AI Programs Lead</p>
-        <p class="member-bio">
-          Leading the development and implementation of AI-driven programs that create meaningful impact and connect communities with the resources they need.
-        </p>
+        <div class="member-card">
+          <div class="member-initial" style="width: 180px; height: 180px; border-radius: 50%; background: #e8e5de; margin: 0 auto 32px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 48px; color: #999;">D</div>
+          <h2 class="member-name">Dominic Rodriguez</h2>
+          <p class="member-title">AI Programs Lead</p>
+          <div class="member-details">
+            <span class="detail-tag">UC Berkeley</span>
+            <span class="detail-tag">Economics</span>
+            <span class="detail-tag">Policy</span>
+          </div>
+          <p class="member-bio">
+            Leading the development and implementation of AI-driven programs that create meaningful impact and connect communities with the resources they need.
+          </p>
+        </div>
       </div>
     </div>
   </section>
