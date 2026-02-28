@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoal Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      font-family: 'IBM Plex Mono', monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 32px;
+      width: 100%;
+    }
+
+    /* Header */
+    header {
+      padding: 48px 0 0;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* Hero */
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 32px 80px;
+      animation: fadeUp 0.8s ease 0.1s both;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 8vw, 72px);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 32px;
+      color: #ffffff;
+    }
+
+    .hero .tagline {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 48px;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: #333;
+      margin: 0 auto;
+    }
+
+    /* Mission */
+    .mission {
+      padding: 80px 0;
+      animation: fadeUp 0.8s ease 0.2s both;
+    }
+
+    .mission .container {
+      text-align: center;
+    }
+
+    .section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .mission-text {
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      font-size: clamp(18px, 3vw, 24px);
+      line-height: 1.7;
+      color: #ccc;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* Contact */
+    .contact {
+      padding: 80px 0 120px;
+      animation: fadeUp 0.8s ease 0.3s both;
+    }
+
+    .contact .container {
+      text-align: center;
+    }
+
+    .contact-link {
+      display: inline-block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      color: #fff;
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #333;
+      transition: border-color 0.3s ease, opacity 0.3s ease;
+    }
+
+    .contact-link:hover {
+      border-color: #fff;
+      opacity: 0.8;
+    }
+
+    /* Footer */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid #151515;
+    }
+
+    footer .container {
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 11px;
+      color: #333;
+      letter-spacing: 0.05em;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      .hero {
+        padding: 80px 24px 60px;
+      }
+
+      .mission,
+      .contact {
+        padding: 60px 0;
+      }
+
+      .container {
+        padding: 0 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#mission">Mission</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Shoal Foundation</h1>
+    <div class="divider"></div>
+  </section>
+
+  <section class="mission" id="mission">
+    <div class="container">
+      <p class="section-label">Our Mission</p>
+      <p class="mission-text">
+        Building the infrastructure for a more connected and equitable future. We invest in people, ideas, and technologies that move the world forward.
+      </p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <a href="mailto:gabe@shoal.foundation" class="contact-link">gabe@shoal.foundation</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Shoal Foundation</p>
+    </div>
+  </footer>
+
+</body>
+</html>
